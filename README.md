@@ -11,3 +11,9 @@ Sources & tutorials I've followed can be found down at the bottom.
 - Having a single source of truth
 - Having read-only App State
 - Mutating the state only through Reducer functions.
+
+
+
+# References
+
+1. https://danielbernal.co/redux-like-architecture-with-swiftui-basics/
