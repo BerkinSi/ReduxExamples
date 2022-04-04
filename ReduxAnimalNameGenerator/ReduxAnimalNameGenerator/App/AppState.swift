@@ -14,5 +14,7 @@ struct AppState {
 }
  
 struct AnimalState {
-    var currentAnimal: String = ""
+    var current: String = ""
+    var fetchError: String?
+    var fetchInProgress: Bool = false
 }

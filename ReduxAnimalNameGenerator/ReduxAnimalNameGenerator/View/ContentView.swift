@@ -13,7 +13,7 @@ struct ContentView: View {
                                                             logMiddleware()])
  
     init() {
-        store.dispatch(.animal(action: .fetchAnimal))
+        store.dispatch(.animal(action: .fetch))
     }
     var body: some View {
         AnimalView()

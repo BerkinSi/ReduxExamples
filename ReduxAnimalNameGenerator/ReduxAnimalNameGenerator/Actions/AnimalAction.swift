@@ -8,6 +8,7 @@
 import Foundation
 
 enum AnimalAction {
-    case fetchAnimal
-    case setCurrentAnimal(animal: String)
+    case fetch
+    case fetchComplete(animal: String)
+    case fetchError(error: AnimalServiceError?)
 }
