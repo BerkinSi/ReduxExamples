@@ -13,9 +13,14 @@
 		94AD211D27FAF45D009FA91C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 94AD211C27FAF45D009FA91C /* Preview Assets.xcassets */; };
 		94AD212527FAF47E009FA91C /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94AD212427FAF47E009FA91C /* AppState.swift */; };
 		94AD212727FAF4CD009FA91C /* AppAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94AD212627FAF4CD009FA91C /* AppAction.swift */; };
-		94AD212927FAF55A009FA91C /* Reducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94AD212827FAF55A009FA91C /* Reducer.swift */; };
+		94AD212927FAF55A009FA91C /* AppReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94AD212827FAF55A009FA91C /* AppReducer.swift */; };
 		94AD212B27FAF607009FA91C /* AppStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94AD212A27FAF607009FA91C /* AppStore.swift */; };
 		94AD212D27FAF758009FA91C /* AnimalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94AD212C27FAF758009FA91C /* AnimalView.swift */; };
+		94AD213027FB0395009FA91C /* AnimalService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94AD212F27FB0395009FA91C /* AnimalService.swift */; };
+		94AD213527FB0914009FA91C /* AnimalAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94AD213427FB0914009FA91C /* AnimalAction.swift */; };
+		94AD213827FB0958009FA91C /* AnimalReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94AD213727FB0958009FA91C /* AnimalReducer.swift */; };
+		94AD213C27FB09C3009FA91C /* AnimalMiddleware.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94AD213B27FB09C3009FA91C /* AnimalMiddleware.swift */; };
+		94AD213E27FB0CEB009FA91C /* LogMiddleware.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94AD213D27FB0CEB009FA91C /* LogMiddleware.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,9 +31,14 @@
 		94AD211C27FAF45D009FA91C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		94AD212427FAF47E009FA91C /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		94AD212627FAF4CD009FA91C /* AppAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAction.swift; sourceTree = "<group>"; };
-		94AD212827FAF55A009FA91C /* Reducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reducer.swift; sourceTree = "<group>"; };
+		94AD212827FAF55A009FA91C /* AppReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppReducer.swift; sourceTree = "<group>"; };
 		94AD212A27FAF607009FA91C /* AppStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStore.swift; sourceTree = "<group>"; };
 		94AD212C27FAF758009FA91C /* AnimalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalView.swift; sourceTree = "<group>"; };
+		94AD212F27FB0395009FA91C /* AnimalService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalService.swift; sourceTree = "<group>"; };
+		94AD213427FB0914009FA91C /* AnimalAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalAction.swift; sourceTree = "<group>"; };
+		94AD213727FB0958009FA91C /* AnimalReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalReducer.swift; sourceTree = "<group>"; };
+		94AD213B27FB09C3009FA91C /* AnimalMiddleware.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalMiddleware.swift; sourceTree = "<group>"; };
+		94AD213D27FB0CEB009FA91C /* LogMiddleware.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogMiddleware.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,9 +71,14 @@
 		94AD211427FAF459009FA91C /* ReduxAnimalNameGenerator */ = {
 			isa = PBXGroup;
 			children = (
+				94AD213927FB097F009FA91C /* App */,
+				94AD213127FB08EE009FA91C /* Middleware */,
+				94AD213227FB08F9009FA91C /* Services */,
+				94AD213327FB0906009FA91C /* Actions */,
+				94AD213627FB0934009FA91C /* Reducers */,
+				94AD213A27FB099B009FA91C /* View */,
 				94AD211527FAF459009FA91C /* ReduxAnimalNameGeneratorApp.swift */,
 				94AD212327FAF46D009FA91C /* Redux Components */,
-				94AD211727FAF459009FA91C /* ContentView.swift */,
 				94AD211927FAF45D009FA91C /* Assets.xcassets */,
 				94AD211B27FAF45D009FA91C /* Preview Content */,
 			);
@@ -81,13 +96,61 @@
 		94AD212327FAF46D009FA91C /* Redux Components */ = {
 			isa = PBXGroup;
 			children = (
-				94AD212427FAF47E009FA91C /* AppState.swift */,
-				94AD212627FAF4CD009FA91C /* AppAction.swift */,
-				94AD212827FAF55A009FA91C /* Reducer.swift */,
-				94AD212A27FAF607009FA91C /* AppStore.swift */,
-				94AD212C27FAF758009FA91C /* AnimalView.swift */,
 			);
 			path = "Redux Components";
+			sourceTree = "<group>";
+		};
+		94AD213127FB08EE009FA91C /* Middleware */ = {
+			isa = PBXGroup;
+			children = (
+				94AD213B27FB09C3009FA91C /* AnimalMiddleware.swift */,
+				94AD213D27FB0CEB009FA91C /* LogMiddleware.swift */,
+			);
+			path = Middleware;
+			sourceTree = "<group>";
+		};
+		94AD213227FB08F9009FA91C /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				94AD212F27FB0395009FA91C /* AnimalService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		94AD213327FB0906009FA91C /* Actions */ = {
+			isa = PBXGroup;
+			children = (
+				94AD212627FAF4CD009FA91C /* AppAction.swift */,
+				94AD213427FB0914009FA91C /* AnimalAction.swift */,
+			);
+			path = Actions;
+			sourceTree = "<group>";
+		};
+		94AD213627FB0934009FA91C /* Reducers */ = {
+			isa = PBXGroup;
+			children = (
+				94AD212827FAF55A009FA91C /* AppReducer.swift */,
+				94AD213727FB0958009FA91C /* AnimalReducer.swift */,
+			);
+			path = Reducers;
+			sourceTree = "<group>";
+		};
+		94AD213927FB097F009FA91C /* App */ = {
+			isa = PBXGroup;
+			children = (
+				94AD212A27FAF607009FA91C /* AppStore.swift */,
+				94AD212427FAF47E009FA91C /* AppState.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		94AD213A27FB099B009FA91C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				94AD211727FAF459009FA91C /* ContentView.swift */,
+				94AD212C27FAF758009FA91C /* AnimalView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -161,11 +224,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				94AD212527FAF47E009FA91C /* AppState.swift in Sources */,
+				94AD213027FB0395009FA91C /* AnimalService.swift in Sources */,
+				94AD213E27FB0CEB009FA91C /* LogMiddleware.swift in Sources */,
 				94AD212727FAF4CD009FA91C /* AppAction.swift in Sources */,
 				94AD211827FAF459009FA91C /* ContentView.swift in Sources */,
+				94AD213527FB0914009FA91C /* AnimalAction.swift in Sources */,
 				94AD212B27FAF607009FA91C /* AppStore.swift in Sources */,
+				94AD213827FB0958009FA91C /* AnimalReducer.swift in Sources */,
 				94AD212D27FAF758009FA91C /* AnimalView.swift in Sources */,
-				94AD212927FAF55A009FA91C /* Reducer.swift in Sources */,
+				94AD213C27FB09C3009FA91C /* AnimalMiddleware.swift in Sources */,
+				94AD212927FAF55A009FA91C /* AppReducer.swift in Sources */,
 				94AD211627FAF459009FA91C /* ReduxAnimalNameGeneratorApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

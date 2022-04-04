@@ -7,6 +7,12 @@
 
 import Foundation
 
+import Foundation
+ 
 struct AppState {
-    var currentAnimal: String = ""    
+    var animal: AnimalState
+}
+ 
+struct AnimalState {
+    var currentAnimal: String = ""
 }

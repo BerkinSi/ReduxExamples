@@ -8,11 +8,12 @@
 import SwiftUI
 
 struct ContentView: View {
-    let store = AppStore(initialState: .init(),
-                         reducer: appReducer)
+    let store = AppStore(initialState: .init(animal: AnimalState()),
+                         reducer: appReducer, middlewares: [animalMiddlware(service: AnimalService()),
+                                                            logMiddleware()])
  
     init() {
-            store.dispatch(.getAnimal)
+        store.dispatch(.animal(action: .fetchAnimal))
     }
     var body: some View {
         AnimalView()
