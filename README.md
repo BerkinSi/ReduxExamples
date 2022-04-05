@@ -17,3 +17,4 @@ Sources & tutorials I've followed can be found down at the bottom.
 # References
 
 1. https://danielbernal.co/redux-like-architecture-with-swiftui-basics/
+2. https://www.raywenderlich.com/22096649-getting-a-redux-vibe-into-swiftui
